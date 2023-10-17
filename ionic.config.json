@@ -1,0 +1,7 @@
+{
+  "name": "letsChat",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
