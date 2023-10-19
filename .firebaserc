@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "lets-chat-f47f6"
+  },
+  "targets": {
+    "lets-chat-f47f6": {
+      "hosting": {
+        "app": [
+          "lets-chat-f47f6"
+        ]
+      }
+    }
+  }
+}
