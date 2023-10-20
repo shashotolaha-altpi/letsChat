@@ -18,17 +18,36 @@
         <br />
         <ion-input label="Password" type="password" formControlName="password" label-placement="floating" fill="outline"
           placeholder="*******"></ion-input>
-        <ion-button expand="block" type="submit">login</ion-button> <br />
+          <ion-button expand="block" type="submit">login</ion-button> 
+          
+        </form>
+        
+        <ion-text color="tertiary" class="ion-text-center">
+          <br />
+          <h1>OR</h1>
+        </ion-text>
+        <br />
 
-      </form>
-      <ion-text color="tertiary" class="ion-text-center">
-        <h1>OR</h1>
-      </ion-text>
-      
-      <ion-button expand="block">Google</ion-button> <br />
-      <ion-button expand="block">Twitter</ion-button> <br />
-      <ion-button expand="block">github</ion-button> <br />
-      <ion-button expand="block">Facebook</ion-button>
+      <div class="social-login ">
+        <ion-chip (click)="googleauthlogin()">
+          <ion-avatar>
+            <img alt="Silhouette of a person's head" src="../../assets/icon/google.jpeg" />
+          </ion-avatar>
+          <ion-label>google</ion-label>
+        </ion-chip>
+        <ion-chip>
+          <ion-avatar>
+            <img alt="Silhouette of a person's head" src="../../assets/icon/twitter.png" />
+          </ion-avatar>
+          <ion-label>Twitter</ion-label>
+        </ion-chip>
+        <ion-chip>
+          <ion-avatar>
+            <img alt="Silhouette of a person's head" src="../../assets/icon/github.png" />
+          </ion-avatar>
+          <ion-label>github</ion-label>
+        </ion-chip>
+      </div>
     </ion-card-content>
   </ion-card>
 </ion-content>

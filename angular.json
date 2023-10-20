@@ -19,8 +19,6 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "browserTarget": "letschat:build",
-            "proxyConfig": "src/proxy.conf.json",
             "assets": [
               {
                 "glob": "**/*",
