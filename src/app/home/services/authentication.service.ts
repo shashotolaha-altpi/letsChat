@@ -8,6 +8,9 @@ import { ActivatedRoute, Router } from '@angular/router';
   providedIn: 'root',
 })
 export class AuthenticationService {
+
+  user$ = this.fireauth.authState.pipe 
+
   constructor(
     private auth: Auth,
     private fireauth: AngularFireAuth,
