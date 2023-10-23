@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Register
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class>Form</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="registerFormDetail" (submit)="register($event)">
+        <ion-input label="Gmail" type="Text" label-placement="floating" formControlName="email" fill="outline"
+          placeholder="abc@gmail.com"></ion-input>
+        <br />
+        <ion-input label="Password" type="password" formControlName="password" label-placement="floating" fill="outline"
+          placeholder="*******"></ion-input>
+        <ion-button expand="block" type="submit">login</ion-button>
+      </form>
+      <ion-text>
+        Already Register yourself? 
+        <ion-text class="link" color="tertiary" routerLink="../login" >
+          Login
+        </ion-text>
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

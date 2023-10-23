@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { io } from 'socket.io-client';
+import { Socket } from 'ngx-socket-io';
 
 @Component({
   selector: 'app-chats',
@@ -7,13 +7,17 @@ import { io } from 'socket.io-client';
   styleUrls: ['./chats.page.scss'],
 })
 export class ChatsPage implements OnInit {
-  socket = io('http://localhost:7000');
 
-  constructor() {}
+  message: string | undefined;
+  constructor(
+    private socket:Socket
+  ) { }
 
   ngOnInit() {
-    console.log('kwhdfk');
-    
-    console.log(this.socket);
+    this.socket.on('message', (data:any)=>this.message = data )
+    this.sendmessage()
+  }
+  sendmessage(){
+    this.socket.emit('sendMessage', { message: 'Hello, server!' });
   }
 }

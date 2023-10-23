@@ -1,5 +1,5 @@
 export const environment = {
-  firebase: {
+  firebaseConfig: {
     projectId: 'lets-chat-f47f6',
     appId: '1:588005915762:web:027171b434e79a3a6616eb',
     storageBucket: 'lets-chat-f47f6.appspot.com',

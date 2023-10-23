@@ -1,6 +1,11 @@
 {
   "hosting": [
     {
+      "target": "app",
+      "source": ".",
+      "frameworksBackend": {}
+    },
+    {
       "source": ".",
       "ignore": [
         "firebase.json",
@@ -10,11 +15,6 @@
       "frameworksBackend": {
         "region": "us-central1"
       }
-    },
-    {
-      "target": "app",
-      "source": ".",
-      "frameworksBackend": {}
     }
   ]
 }

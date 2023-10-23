@@ -12,7 +12,7 @@
       <ion-card-title class>Form</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <form [formGroup]="loginForm" (submit)="submitHandler($event)">
+      <form [formGroup]="loginForm" (submit)="submitHandler()">
         <ion-input label="Gmail" type="Text" label-placement="floating" formControlName="email" fill="outline"
           placeholder="abc@gmail.com"></ion-input>
         <br />
@@ -21,6 +21,12 @@
           <ion-button expand="block" type="submit">login</ion-button> 
           
         </form>
+        <ion-text>
+          Want to Register yourself? 
+          <ion-text class="link" color="tertiary" routerLink="../register" >
+            Register
+          </ion-text>
+        </ion-text>
         
         <ion-text color="tertiary" class="ion-text-center">
           <br />
