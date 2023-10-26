@@ -6,12 +6,20 @@ import { ChatPage } from './chat.page';
 const routes: Routes = [
   {
     path: '',
-    component: ChatPage
+    component: ChatPage,
+    children:[
+      {
+        path: '',
+        redirectTo:'chats',
+        pathMatch:'full'
+      },
+
+      {
+        path: 'chats',
+        loadChildren: () => import('./chats/chats.module').then( m => m.ChatsPageModule)
+      }
+    ]
   },
-  {
-    path: 'chats',
-    loadChildren: () => import('./chats/chats.module').then( m => m.ChatsPageModule)
-  }
 ];
 
 @NgModule({

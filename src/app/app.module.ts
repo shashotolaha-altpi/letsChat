@@ -14,14 +14,18 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { SocketIoModule,SocketIoConfig } from 'ngx-socket-io';
 
-const config : SocketIoConfig = { url: 'http://192.168.1.15:3000', options: {} }; 
+const config : SocketIoConfig = { url: 'http://localhost:8080', options: {
+  // Add any other socket.io options as needed
+  // withCredentials: true, // Set withCredentials to true
+} }; 
+
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule, 
-    IonicModule.forRoot(),
     SocketIoModule.forRoot(config),
+    IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp( environment.firebaseConfig),
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),

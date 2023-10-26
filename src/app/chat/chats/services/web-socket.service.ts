@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Socket } from 'ngx-socket-io';
-import { eventNames } from 'process';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,13 +11,11 @@ export class WebSocketService {
     private socket: Socket
   ) { }
 
-  getIntialData(){
-    return this.createObserable
+  sendMessage(msg: string) {
+    this.socket.emit('message', msg);
   }
-  getUpdatedData(){}
-
-  createObserable(event:string){
-    // return this.socket.fromEvent<T>(eventName: string): Observable<T> {}
+  getMessage() {
+    return this.socket.fromEvent('message').pipe(map((data:any) => data.msg));
   }
 
 
